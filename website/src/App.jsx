@@ -1,9 +1,12 @@
+import Hero from "./components/Hero";
+
 const App = () => {
-  return ( 
-    <div className="flex items-center justify-center h-screen">
-      <h1 className="text-3xl font-bold underline">Welcome to my website!</h1>
-    </div>
-   );
-}
- 
+  return (
+    <>
+      <Hero />
+      <div className="container mx-auto"></div>
+    </>
+  );
+};
+
 export default App;

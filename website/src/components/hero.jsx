@@ -1,5 +1,5 @@
-import OutlineButton from "./OutlineButton";
-import SolidButton from "./SolidButton";
+import OutlineButton from "./ComponentParts/OutlineButton";
+import SolidButton from "./ComponentParts/SolidButton";
 
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
           <span className="text-gray-500 text-base">
             lorem ipsum dolor sit amet
           </span>
-          <h1 className="text-7xl font-bold">Hello, World!</h1>
+          <h1 className="text-6xl font-bold">Hello, World!</h1>
           <span className="text-gray-500 text-2xl">Welcome to my website.</span>
         </span>
         <SolidButton />

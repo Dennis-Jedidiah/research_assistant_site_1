@@ -8,10 +8,10 @@ const App = () => {
     <>
       <Hero />
       <div className="container mx-auto">
-        <Features/>
-        <PricingSection/>
+        <Features />
+        <PricingSection />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -1,5 +1,6 @@
-import Features from "./components/Features";
-import Hero from "./components/Hero";
+import Features from "./components/FeaturesSection";
+import Footer from "./components/FooterSection";
+import Hero from "./components/HeroSection";
 import PricingSection from "./components/PricingSection";
 
 const App = () => {
@@ -7,13 +8,10 @@ const App = () => {
     <>
       <Hero />
       <div className="container mx-auto">
-        <Features />
-        <PricingSection />
+        <Features/>
+        <PricingSection/>
       </div>
-      {/* <div className="text-8xl">Heading</div>
-      <div className="text-6xl">Hello!</div>
-      <div className="text-3xl">Subheading</div>
-      <div className="text-base">Body Text!!</div> */}
+      <Footer/>
     </>
   );
 };

@@ -1,7 +1,7 @@
-const FeatureCard = () => {
+const ServiceCard = () => {
   return (
     <div className="flex flex-col w-5/16 p-6 gap-4">
-      <div className="text-xl">Feature Title</div>
+      <div className="text-xl">Service Title</div>
       <div>
         lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam
         lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam
@@ -12,4 +12,4 @@ const FeatureCard = () => {
   );
 };
 
-export default FeatureCard;
+export default ServiceCard;

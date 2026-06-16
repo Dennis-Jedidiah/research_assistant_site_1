@@ -1,11 +1,12 @@
-const SolidButton = ({ label, onClick }) => {
+const SolidButton = ({onClick, className, children, ...props}) => {
   return (
     <>
       <button
-        className="border border-gray-400 rounded-lg bg-gray-400 text-white px-2 py-2 text-base w-full"
+        className={`border-2 border-indigo-500 rounded-lg bg-indigo-500 px-2 py-2 hover:cursor-pointer ${className}`}
         onClick={onClick}
+        {...props}
       >
-        {label || "Click Me"}
+        {children || "Click Me"}
       </button>
     </>
   );

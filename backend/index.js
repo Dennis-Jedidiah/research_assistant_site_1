@@ -1,6 +1,5 @@
 const dotenv = require("dotenv");
 dotenv.config();
-
 const express = require("express");
 const stripe = require("stripe")(process.env.REACT_APP_TEST_KEY);
 const cors = require("cors");
@@ -13,10 +12,6 @@ const PORT = 5001;
 
 app.use(cors());
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.json({ message: "Hello, World!" });
-});
 
 app.post("/checkout", async (req, res) => {
   try {

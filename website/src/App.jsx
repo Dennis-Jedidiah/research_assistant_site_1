@@ -1,12 +1,12 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/HeroSection";
-import InstructorSection from "./components/InstructorSection";
-import HowitworksSection from "./components/HowItWorks";
-import Packages from "./components/PackageSection";
-import SoloServices from "./components/SoloServicesSection";
-import Footer from "./components/FooterSection";
-import BookASession from "./components/BookASession";
-// import Services from "./components/ServiceSection";
+import Navbar from "./components/ComponentParts/Navbar";
+import Hero from "./components/Section_hero";
+import InstructorSection from "./components/Section_instructors";
+import HowitworksSection from "./components/Section_how_it_works";
+import Packages from "./components/Section_packages";
+import SoloServices from "./components/Section_solo";
+import Footer from "./components/Section_footer";
+import BookASession from "./components/Section_booking";
+// import Services from "./components/Section_services";
 
 const App = () => {
   return (

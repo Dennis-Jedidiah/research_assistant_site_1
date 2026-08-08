@@ -1,5 +1,5 @@
-import OutlineButton from "./OutlineButton";
-import SolidButton from "./SolidButton";
+import OutlineButton from "./Button_outline";
+import SolidButton from "./Button_solid";
 import { useState } from "react";
 
 const PackageCard = ({ width, title, body_text, price, package_list }) => {

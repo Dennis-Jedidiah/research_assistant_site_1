@@ -1,9 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=BBH+Hegarty&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 @import "tailwindcss";
 
+@theme {
+
+  --color-custom-black-100: #E8E8E8;
+  --color-custom-black-200: #C6C5C6;
+  --color-custom-black-300: #A3A3A4;
+  --color-custom-black-400: #5F5D5F;
+  --color-custom-black-500: #1A181B;
+  --color-custom-black-600: #151316;
+  --color-custom-black-700: #100E10;
+  --color-custom-black-800: #0A0A0B;
+  --color-custom-black-900: #050505;
+
+  --color-custom-white-100: #FFFFFF;
+  --color-custom-white-200: #FDFDFD;
+  --color-custom-white-300: #FAFAFA;
+  --color-custom-white-400: #F5F5F5;
+  --color-custom-white-500: #FFFFFF;
+  --color-custom-white-600: #F0F0F0;
+  --color-custom-white-700: #E8E8E8;
+  --color-custom-white-800: #DEDEDE;
+  --color-custom-white-900: #D4D4D4;
+
+  --color-custom-blue-100: #ECEEF7;
+  --color-custom-blue-200: #D0D5EA;
+  --color-custom-blue-300: #B4BCDE;
+  --color-custom-blue-400: #7B89C6;
+  --color-custom-blue-500: #4357AD;
+  --color-custom-blue-600: #36468A;
+  --color-custom-blue-700: #283468;
+  --color-custom-blue-800: #1B2345;
+  --color-custom-blue-900: #0D1123;
+
+  --color-custom-green-100: #EDF6F6;
+  --color-custom-green-200: #D1EAE9;
+  --color-custom-green-300: #B6DDDB;
+  --color-custom-green-400: #7FC3C1;
+  --color-custom-green-500: #48A9A6;
+  --color-custom-green-600: #3A8785;
+  --color-custom-green-700: #2B6564;
+  --color-custom-green-800: #1D4442;
+  --color-custom-green-900: #0E2221;
+}
 
 .content-font {
-  font-family: "Aleo", serif;
+  font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -13,4 +56,11 @@
   font-family: "BBH Hegarty", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@layer base {
+  body {
+    font-family: "Lora", serif;
+    font-weight: 300;
+  }
 }

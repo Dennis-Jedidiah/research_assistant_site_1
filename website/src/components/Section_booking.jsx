@@ -1,6 +1,6 @@
 import SoloCard from "./ComponentParts/SoloCard";
 import TextInput from "./ComponentParts/TextInput";
-import SolidButton from "./ComponentParts/SolidButton";
+import SolidButton from "./ComponentParts/Button_solid";
 
 const BookASession = () => {
   const applicationMaterials = [

@@ -16,12 +16,12 @@ const BookASession = () => {
   ];
   return (
     <div
-      className="h-auto flex items-start justify-center px-30 py-15 bg-blue-100/40 gap-4"
+      className="flex items-start justify-center px-25 py-15 bg-custom-blue-100/50 gap-4"
       id="book_a_session"
     >
-      <div className="flex flex-col bg-white p-5 rounded-lg shadow-lg basis-4/7">
-        <div className="space-y-2 text-center">
-          <div className="text-4xl">Book A Session</div>
+      <div className="flex flex-col bg-white p-5 rounded-2xl basis-4/7">
+        <div className="space-y-2 text-left">
+          <div className="text-3xl pb-5">Book A Session</div>
         </div>
         <div className="text-lg drop-shadow-xl/10 rounded-lg">
           <form action="" className="flex flex-col gap-3 ">
@@ -70,9 +70,6 @@ const BookASession = () => {
           body_text={policiesAndNotes}
           border={"bg-white shadow-lg rounded-lg py-8"}
         />
-      </div>
-      <div className="flex mt-6 h-fit gap-10">
-        <div className="w-4/12 bg-yellow-300 self-center drop-shadow-xl/10"></div>
       </div>
     </div>
   );

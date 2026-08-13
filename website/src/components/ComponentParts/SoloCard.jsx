@@ -7,11 +7,11 @@ const SoloCard = ({
   title_color,
 }) => {
   return (
-    <div className={`flex flex-col gap-2 p-4 ${border}  bg-slate-100/50`}>
+    <div className={`flex flex-col gap-2 p-4 ${border}  bg-custom-white-200`}>
       <div className={`${title_color} w-fit font-bold`}>{title}</div>
       {subtitle ? <div className="font-light">{subtitle}</div> : null}
       {price ? (
-        <div className="font-semibold text-rose-800/60 text-xl">{price}</div>
+        <div className="font-semibold text-custom-green-600 text-xl">{price}</div>
       ) : null}
       {body_text ? (
         <ul className="list-disc list-inside font-light">

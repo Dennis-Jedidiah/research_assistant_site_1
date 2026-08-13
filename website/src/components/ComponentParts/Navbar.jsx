@@ -35,7 +35,7 @@ const Navbar = () => {
         {/* takes you to packages */}
         <OutlineButton
           children={"Book"}
-          className="text-custom-black-400 shadow-md"
+          className="text-custom-black-400 shadow-md transition-all duration-[200ms] ease-in-out hover:bg-custom-green-500 hover:text-white"
           onClick={() => move_to_section("book_a_session")}
         />
       </div>

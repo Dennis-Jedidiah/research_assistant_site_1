@@ -4,25 +4,28 @@ import { Goal, FolderClosed, Handshake, CheckCircle } from "lucide-react";
 const HowitworksSection = () => {
   return (
     <div
-      className="h-auto flex flex-col items-center justify-center py-15 px-25 bg-blue-100/40"
+      className="h-auto flex flex-row items-stretch items-center justify-center py-15 px-25"
       id="How_it_works"
     >
-      <div className="space-y-2 text-center">
-        <div className="text-base text-blue-300">Here's what I offer</div>
-        <div className="text-4xl">How it works</div>
+      <div className="flex flex-col justify-center w-3/4 p-5">
+        <div className="pb-5" id="How_it_works_header">
+          <div className="text-base text-custom-blue-400">
+            Here's what I offer
+          </div>
+          <div className="text-4xl">How it works</div>
+        </div>
+        <p>
+          Getting started doesn't have to be complicated. Whether you're
+          choosing a university program, preparing for internships, building
+          your resume, or planning your next academic step, we'll work through
+          it together. The goal is simple: give you clear direction, practical
+          advice, and a plan you can confidently follow.
+        </p>
       </div>
-
-      <div className="text-center my-5 p-5 text-lg">
-        Getting started doesn't have to be complicated. Whether you're choosing
-        a university program, preparing for internships, building your resume,
-        or planning your next academic step, we'll work through it together. The
-        goal is simple: give you clear direction, practical advice, and a plan
-        you can confidently follow.
-      </div>
-      <div className="grid grid-cols-2 gap-3 rounded-lg bg-white shadow-lg p-5 w-2/3 h-fit">
+      <div className="grid grid-cols-12 grid-rows-3 gap-3 p-5 h-fit">
         <GridItem
-          border={"bg-slate-100/60"}
-          color={"bg-orange-100/70 text-orange-300"}
+          border={"bg-orange-100/80 col-span-12 row-span-1"}
+          color={"text-orange-300"}
           icon={<Goal />}
           title={"Choose a goal"}
           body_text={
@@ -30,17 +33,22 @@ const HowitworksSection = () => {
           }
         />
         <GridItem
-          border={"bg-slate-100/60"}
-          color={"bg-green-100/70 text-green-300"}
+          border={"bg-green-100/80 col-span-6 row-span-2"}
+          color={"text-green-300"}
           icon={<FolderClosed />}
           title={"Send materials"}
           body_text={
-            "Resume (if you have one), posting/program link, transcript (optional), deadlines."
+            <ul className="list-disc list-outside pl-5">
+              <li>Resume (if you have one)</li>
+              <li>Posting/program link</li>
+              <li>Transcript (optional)</li>
+              <li>Deadlines</li>
+            </ul>
           }
         />
         <GridItem
-          border={"bg-slate-100/60"}
-          color={"bg-purple-100/70 text-purple-300"}
+          border={"bg-purple-100/80 col-span-6 row-span-1"}
+          color={"text-purple-300"}
           icon={<Handshake />}
           title={"Meet + build"}
           body_text={
@@ -48,11 +56,13 @@ const HowitworksSection = () => {
           }
         />
         <GridItem
-          border={"bg-slate-100/60"}
-          color={"bg-rose-100/70 text-rose-300"}
+          border={"bg-rose-100/80 col-span-6 row-span-1"}
+          color={"text-rose-300"}
           icon={<CheckCircle />}
           title={"Deliverables"}
-          body_text={"You leave with polished docs + a roadmap you can follow."}
+          body_text={
+            "You leave with polished docs + a roadmap you can follow."
+          }
         />
       </div>
     </div>

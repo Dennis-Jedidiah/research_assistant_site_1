@@ -27,16 +27,22 @@ const Packages = () => {
 
   return (
     <div
-      className="h-auto flex flex-col items-center justify-center py-15 px-25"
+      className="flex flex-col items-center justify-center py-15 px-25 bg-custom-blue-100/50"
       id="packages"
     >
-      <div className="space-y-2 text-center">
-        <div className="text-4xl">Packages</div>
-      </div>
-      <div className="text-center my-5 p-5 text-lg">
-          <p>Bundles are the best value if you want a full “101 → ready to apply” transformation.</p>
-          <p>Tip: If you’re in Grade 11–12, start with Pathway Starter first, then add One-Stop Career Studio when you’re applying.</p>
+      <div className="text-center p-5">
+        <div className="text-center pb-5">
+          <div className="text-4xl">Packages</div>
         </div>
+        <p>
+          Bundles are the best value if you want a full “101 → ready to apply”
+          transformation.
+        </p>
+        <p>
+          Tip: If you’re in Grade 11–12, start with Pathway Starter first, then
+          add One-Stop Career Studio when you’re applying.
+        </p>
+      </div>
       <div className="my-5 flex justify-between w-fit mx-25">
         <PackageCard
           width="w-5/16"

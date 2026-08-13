@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="h-screen flex flex-row items-end justify-center" id="header">
       <div className="flex flex-col justify-center gap-5 pl-25 py-5 h-full w-1/2">
         <span className="space-y-2">
-          <h1 className="text-6xl heading-font py-3 text-custom-blue-700">
+          <h1 className="text-6xl heading-font py-3 text-custom-blue-500 text-shadow-lg">
             Career Guidance,
             <br />
             Just for You!

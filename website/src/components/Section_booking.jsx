@@ -20,7 +20,7 @@ const BookASession = () => {
       id="book_a_session"
     >
       <div className="flex flex-col justify-center gap-4 basis-4/8">
-        <h1 className="text-6xl font-bold heading-font text-custom-blue-500">
+        <h1 className="text-6xl font-bold heading-font text-custom-black-500">
           Book a session with me
         </h1>
         <p className="text-lg font-light text-custom-black-500">

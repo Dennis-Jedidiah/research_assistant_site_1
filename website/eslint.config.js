@@ -8,9 +8,7 @@ export default defineConfig([
   globalIgnores(['dist']),
   {
     files: [
-      'index.html',
       './src/**/*.{js,jsx}',
-
     ],
     extends: [
       js.configs.recommended,

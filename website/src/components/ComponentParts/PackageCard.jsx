@@ -21,7 +21,7 @@ const PackageCard = ({ width, title, body_text, price, package_list }) => {
       <div className="text-base font-bold">{title}</div>{" "}
       {/* This is the name of the package plan */}
       <div className="flex items-center gap-3">
-        <div className="text-3xl font-bold text-custom-green-500">{price}</div>{" "}
+        <div className="text-3xl font-bold text-custom-blue-500">{price}</div>{" "}
         <div className="text-gray-500">per month</div>
       </div>{" "}
       {/* This is just the billing cycle (per month) */}
@@ -39,7 +39,7 @@ const PackageCard = ({ width, title, body_text, price, package_list }) => {
       {/* This is a description of the package plan. It will most likely be a list of services. */}
       <div>
         <OutlineButton
-          className="w-full transition-all duration-[200ms] ease-in-out hover:bg-custom-green-500 hover:text-white"
+          className="w-full transition-all duration-[200ms] ease-in-out hover:bg-custom-blue-500 hover:text-white"
           children="Get Started"
           onClick={handleCheckout}
         />

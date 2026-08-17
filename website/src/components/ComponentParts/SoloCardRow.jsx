@@ -11,7 +11,7 @@ const SoloCard = ({
       <div className={`${title_color} w-fit font-bold`}>{title}</div>
       {subtitle ? <div className="font-light">{subtitle}</div> : null}
       {price ? (
-        <div className="font-semibold text-custom-green-600 text-xl">{price}</div>
+        <div className="font-semibold text-custom-blue-600 text-xl">{price}</div>
       ) : null}
       {body_text ? (
         <ul className="list-disc list-inside font-light">

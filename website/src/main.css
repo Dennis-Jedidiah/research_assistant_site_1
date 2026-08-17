@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Elms+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
 
 @import "tailwindcss";
 
@@ -46,7 +46,7 @@
 }
 
 .content-font {
-  font-family: "Elms Sans", sans-serif;
+  font-family: "Literata", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -60,7 +60,7 @@
 
 @layer base {
   body {
-    font-family: "Elms Sans", sans-serif;
+    font-family: "Literata", sans-serif;
     font-weight: 300;
   }
 }

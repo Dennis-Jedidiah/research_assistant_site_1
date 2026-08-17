@@ -6,11 +6,14 @@ import Packages from "./components/Section_packages";
 import SoloServices from "./components/Section_solo";
 import Footer from "./components/Section_footer";
 import BookASession from "./components/Section_booking";
-// import Services from "./components/Section_services";
+import background from "./assets/papyrus.png"
 
 const App = () => {
   return (
-    <div className="bg-slate-100/10">
+    <div
+      className="bg-slate-100/10"
+      style={{ backgroundImage: `url(${background})` }}
+    >
       <Navbar />
       <Hero />
       <InstructorSection />

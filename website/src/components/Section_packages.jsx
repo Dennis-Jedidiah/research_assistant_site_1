@@ -1,5 +1,4 @@
 import PackageCard from "./ComponentParts/PackageCard";
-import VerticalDivider from "./ComponentParts/VerticalLine";
 
 const Packages = () => {
   const highSchoolList = [

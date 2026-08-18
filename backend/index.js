@@ -13,32 +13,7 @@ const PORT = 5001;
 app.use(cors());
 app.use(express.json());
 
-app.post("/checkout", async (req, res) => {
-  try {
-    const session = await stripe.checkout.sessions.create({
-      mode: "payment",
-      line_items: [
-        {
-          price_data: {
-            currency: "cad",
-            product_data: {
-              name: "Pricing Plan",
-            },
-            unit_amount: 199,
-          },
-          quantity: 1,
-        },
-      ],
-      success_url:
-        "https://dashboard.stripe.com/workbench/blueprints/one-time-payment/checkout-chapter?confirmation-redirect=create-checkout-session",
-      cancel_url:
-        "https://dashboard.stripe.com/workbench/blueprints/one-time-payment/checkout-chapter?confirmation-redirect=create-checkout-session",
-    });
-
-    res.send({ url: session.url });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+app.post("/", async (req, res) => {
 });
 
 app.listen(PORT, () => {

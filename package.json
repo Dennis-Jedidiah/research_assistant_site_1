@@ -1,0 +1,22 @@
+{
+  "name": "ryv-assistant-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Career coaching site (website) and Stripe checkout API (backend)",
+  "workspaces": [
+    "website",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,magenta \"npm:dev:web\" \"npm:dev:api\"",
+    "dev:web": "npm run dev -w website",
+    "dev:api": "npm run dev -w backend",
+    "start:api": "npm run start -w backend",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "preview": "npm run preview -w website"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

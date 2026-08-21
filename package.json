@@ -8,6 +8,7 @@
     "backend"
   ],
   "scripts": {
+    "test": "jasmine",
     "dev": "concurrently -n web,api -c cyan,magenta \"npm:dev:web\" \"npm:dev:api\"",
     "dev:web": "npm run dev -w website",
     "dev:api": "npm run dev -w backend",

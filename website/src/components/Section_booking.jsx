@@ -1,6 +1,4 @@
-import SoloCard from "./ComponentParts/SoloCard";
 import TextInput from "./ComponentParts/TextInput";
-import SolidButton from "./ComponentParts/Button_solid";
 
 const BookASession = () => {
   const applicationMaterials = [
@@ -45,12 +43,13 @@ const BookASession = () => {
         <div className="space-y-2 text-left">
           <div className="text-3xl pb-5">Book A Session</div>
         </div>
-        <div className="text-lg drop-shadow-xl/10 rounded-lg">
-          <form action="" className="flex flex-col gap-3 ">
+        <div className="text-lg drop-shadow-xl/10 rounded-lg text-black">
+          <form action="https://formsubmit.co/da9f18cf33c8600364a1538c53ca6945" method="POST" className="flex flex-col gap-3 ">
+            <input type="hidden" name="_next" value=""></input>
             <label htmlFor="">Your name</label>
             <TextInput name={"name"} placeholder={"your name"} />
             <label htmlFor="">Email</label>
-            <TextInput name={"email"} placeholder={"you@email.com"} />
+            <TextInput name={"email"} _replyto placeholder={"you@email.com"} />
             <label htmlFor="">Service</label>
             <select
               className="px-3 py-1 rounded-lg placeholder:text-custom-blue-300 bg-custom-white-100 text-custom-blue-300"

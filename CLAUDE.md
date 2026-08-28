@@ -6,6 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A single-page marketing/booking site for Dr. Arshia Zaidi's career-coaching practice ("Career Studio 101"), plus a minimal Express backend for Stripe checkout. Per the README, the site was built for a research assistant's professor.
 
+## Workflow Rules
+- Before making any file modifications or running write commands, always output a detailed, step-by-step implementation plan.
+- Wait for user approval of the plan before proceeding to execute any changes.
+
+
 ## Layout & commands
 
 An npm workspace (npm 7+ built-in — no Lerna/Turborepo/pnpm) with two packages, `website` and `backend`. There is one hoisted `node_modules` and one `package-lock.json`, both at the root. **Always install from the root** — running `npm install` inside `website/` or `backend/` creates a nested `node_modules` that shadows the hoisted one and causes version-mismatch confusion.

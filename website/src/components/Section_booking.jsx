@@ -87,7 +87,7 @@ const BookASession = () => {
         )}
         <div className="text-lg drop-shadow-xl/10 rounded-lg text-black">
           <form
-            action="https://formsubmit.co/da9f18cf33c8600364a1538c53ca6945"
+            action="https://formsubmit.co/9b7dc09472329be01954bc42535785da"
             method="POST"
             className="flex flex-col gap-3 "
             onSubmit={handleFormSubmit}
@@ -123,11 +123,11 @@ const BookASession = () => {
                 Select a service / Package{" "}
               </option>
               <option value="pathway starter package">
-                Pathway Starter (HS)
+                Package - Pathway Starter (HS)
               </option>
-              <option value="One-Stop Career Studio">Career Studio</option>
+              <option value="One-Stop Career Studio">Package - One-Stop Career Studio</option>
               <option value="Application Accelerator">
-                Application Accelerator
+                Package - Application Accelerator
               </option>
               <option value="resume">Resume 101</option>
               <option value="linkedin">LinkedIn 101</option>

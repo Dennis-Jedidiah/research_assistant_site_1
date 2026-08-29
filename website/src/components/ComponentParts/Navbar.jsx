@@ -3,7 +3,7 @@ import { move_to_section } from "../../functions/Pretty_design_functions";
 
 const Navbar = () => {
   return (
-    <nav className="hidden lg:block lg:flex lg:justify-between lg:items-center lg:fixed lg:px-25 lg:bg-white lg:w-full lg:z-100 lg:shadow-md">
+    <nav className="block lg:flex lg:justify-between lg:items-center lg:fixed lg:px-25 lg:bg-white lg:w-full lg:z-100 lg:shadow-md">
       <img src={logo} alt="Logo" className="h-20" />
       <div className="flex gap-4 h-fit items-center">
         <span

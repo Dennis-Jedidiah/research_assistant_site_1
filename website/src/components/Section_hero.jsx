@@ -33,11 +33,11 @@ const Hero = () => {
         alt="Hero"
         className="hidden lg:block lg:flex-1 lg:static lg:w-1/2 lg:object-cover"
       />
-      <img
+      {/* <img
         src={header_bg_mid}
         alt="Header Background"
         className="absolute top-0 h-full z-[-1] object-cover object-left opacity-30 lg:hidden"
-      />
+      /> */}
     </div>
   );
 };

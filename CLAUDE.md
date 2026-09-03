@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-A single-page marketing/booking site for Dr. Arshia Zaidi's career-coaching practice ("Career Studio 101"), plus a minimal Express backend for Stripe checkout. Per the README, the site was built for a research assistant's professor.
+A single-page marketing/booking site for Dr. Arshia Zaidi's career-coaching practice ("Career Studio 101"). Per the README, the site was built for a research assistant's professor.
 
 ## Workflow Rules
 - Before making any file modifications or running write commands, always output a detailed, step-by-step implementation plan.
@@ -13,27 +13,21 @@ A single-page marketing/booking site for Dr. Arshia Zaidi's career-coaching prac
 
 ## Layout & commands
 
-An npm workspace (npm 7+ built-in — no Lerna/Turborepo/pnpm) with two packages, `website` and `backend`. There is one hoisted `node_modules` and one `package-lock.json`, both at the root. **Always install from the root** — running `npm install` inside `website/` or `backend/` creates a nested `node_modules` that shadows the hoisted one and causes version-mismatch confusion.
+An npm workspace (npm 7+ built-in) with one package, `website`. There is one hoisted `node_modules` and one `package-lock.json`, both at the root. **Always install from the root** — running `npm install` inside `website/` creates a nested `node_modules` that shadows the hoisted one and causes version-mismatch confusion.
 
 ```bash
-npm install            # from the root; installs both workspaces
+npm install            # from the root; installs the website workspace
 
-npm run dev            # both: Vite on :5173 + API on :5001, via concurrently
-npm run dev:web        # Vite alone
-npm run dev:api        # API alone (node --watch)
-npm run start:api      # API, no watch
+npm run dev            # Vite on :5173
+npm run dev:web        # same as dev
 npm run build          # vite build -> website/dist
 npm run lint           # ESLint over website/src
 npm run preview
 ```
 
-`-w <name>` targets a workspace by its package `name` field, not its directory — they happen to match here. Root `build`/`lint` use `--workspaces --if-present`, which is what lets the backend (no such scripts) be skipped instead of failing the run.
+There is no test setup in the package (`npm test` is the npm default stub and exits 1). Don't invent test commands — if tests are needed, set up the runner first.
 
-There is no test setup in either package (`backend`'s `npm test` is the npm default stub and exits 1). Don't invent test commands — if tests are needed, set up the runner first.
-
-`backend/.env` is untracked; [backend/.env.example](backend/.env.example) lists the required keys — currently just `REACT_APP_TEST_KEY` (the Stripe **secret** key, despite the `REACT_APP_` name). `images/` is gitignored.
-
-[website/src/functions/api.js](website/src/functions/api.js) exports `API_BASE` (`VITE_API_URL`, default `http://localhost:5001`). Nothing imports it yet — [PackageCard.jsx](website/src/components/ComponentParts/PackageCard.jsx) hardcodes its own URL and should be switched to `API_BASE` when checkout is rebuilt.
+`images/` is gitignored.
 
 ## Frontend architecture
 
@@ -53,18 +47,9 @@ There is no test setup in either package (`backend`'s `npm test` is the npm defa
 
 `vite.config.js` sets `base: './'` for relative-path asset serving.
 
-## Backend
-
-[backend/index.js](backend/index.js) is ESM, Express 5, unrestricted `cors()`, port 5001 hardcoded. It currently defines **no routes at all** — it constructs a Stripe client and listens, nothing more. Its only intended job is creating Stripe Checkout sessions.
-
-Booking email is deliberately *not* handled here: per [notes.md](notes.md), the form is moving to [FormSubmit](https://formsubmit.co/), which posts straight from the browser and needs no backend. Don't reintroduce a server-side mail path without checking that decision first.
-
-**If you add a module that reads `process.env` at import time, it will see undefined values.** ESM evaluates imports before `index.js` reaches `dotenv.config()`. Read env inside functions, or lazily on first use.
-
 ## Current state (incomplete work)
 
-- **The checkout endpoint does not exist.** [PackageCard.jsx](website/src/components/ComponentParts/PackageCard.jsx) POSTs to `http://localhost:5001/checkout`, but there is no such route — the request 404s. A working Stripe handler is in git history (`git log -S'checkout.sessions.create' -- backend/index.js`); it hardcoded a $1.99 CAD "Pricing Plan" line item and used Stripe dashboard URLs for `success_url`/`cancel_url`, so price was never driven by the selected package.
 - **The booking form does not submit anywhere.** [Section_booking.jsx](website/src/components/Section_booking.jsx) is a plain `<form action="">` with no handler; wiring it to FormSubmit is the next step. Its `service` dropdown also offers only 3 options (resume, LinkedIn, interview) while the site sells 6 solo services, 4 add-ons, and 3 packages.
-- There is a Jasmine setup in [spec/](spec/) (config at [spec/support/jasmine.mjs](spec/support/jasmine.mjs)) holding the default `jasmine_examples` scaffold. It is not wired to an npm script — `backend`'s `npm test` is still the failing default stub.
+- There is a Jasmine setup in [spec/](spec/) (config at [spec/support/jasmine.mjs](spec/support/jasmine.mjs)) holding the default `jasmine_examples` scaffold. It is not wired to an npm script.
 - [Section_services.jsx](website/src/components/Section_services.jsx) / [ServiceCard.jsx](website/src/components/ComponentParts/ServiceCard.jsx) are lorem-ipsum placeholders, commented out of `App.jsx`. `VerticalLine.jsx` is unused. [SoloCardRow.jsx](website/src/components/ComponentParts/SoloCardRow.jsx) is a near-copy of `SoloCard.jsx` (also exported under the name `SoloCard`).
 - Layout uses fixed viewport-relative sizing (`px-25`, `h-screen`, `w-5/16`) and is not responsive; the fixed navbar has no mobile menu.

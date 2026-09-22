@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+--color-evergreen-50: rgb(232 252 253);
+--color-evergreen-100: rgb(208 249 251);
+--color-evergreen-200: rgb(162 244 246);
+--color-evergreen-300: rgb(115 238 242);
+--color-evergreen-400: rgb(68 232 238);
+--color-evergreen-500: rgb(22 226 233);
+--color-evergreen-600: rgb(17 181 187);
+--color-evergreen-700: rgb(13 136 140);
+--color-evergreen-800: rgb(9 91 93);
+--color-evergreen-900: rgb(4 45 47);
+--color-evergreen-950: rgb(3 32 33);
+
+--color-verdigris-50: rgb(236 249 247);
+--color-verdigris-100: rgb(217 242 238);
+--color-verdigris-200: rgb(179 230 222);
+--color-verdigris-300: rgb(140 217 205);
+--color-verdigris-400: rgb(102 204 189);
+--color-verdigris-500: rgb(64 191 172);
+--color-verdigris-600: rgb(51 153 138);
+--color-verdigris-700: rgb(38 115 103);
+--color-verdigris-800: rgb(25 77 69);
+--color-verdigris-900: rgb(13 38 34);
+--color-verdigris-950: rgb(9 27 24);
+
+--color-porcelain-50: rgb(246 244 238);
+--color-porcelain-100: rgb(238 232 221);
+--color-porcelain-200: rgb(221 210 187);
+--color-porcelain-300: rgb(204 187 153);
+--color-porcelain-400: rgb(187 164 119);
+--color-porcelain-500: rgb(170 142 85);
+--color-porcelain-600: rgb(136 113 68);
+--color-porcelain-700: rgb(102 85 51);
+--color-porcelain-800: rgb(68 57 34);
+--color-porcelain-900: rgb(34 28 17);
+--color-porcelain-950: rgb(24 20 12);
+
+--font-display: 'Google Sans Flex', sans-serif;
+--font-heading: 'Josefin Sans';
+}
